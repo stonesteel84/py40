@@ -1,5 +1,7 @@
 import pygame
 import sys
+import tkinter as tk
+from tkinter import messagebox
 
 FPS = 60
 MAX_WIDTH = 600
@@ -72,8 +74,20 @@ def main():
         
         if player_rect.colliderect(enemy_rect):
             print("충돌")
-            pygame.quit()
-            sys.exit()
+            #pygame.quit()
+            #sys.exit()
+            # MessageBox = pygame.display.set_mode((MAX_WIDTH, MAX_HEIGHT))
+            # font = pygame.font.Font(None, 74)
+            # text = font.render("Game Over", True, (255, 0, 0))
+            # text_rect = text.get_rect(center=(MAX_WIDTH // 2, MAX_HEIGHT // 2))
+            # MessageBox.blit(text, text_rect)
+            # pygame.display.flip()
+            # Tkinter 창 숨기기
+            root = tk.Tk()
+            root.withdraw()  # 실제 GUI 창을 안 띄움
+
+            # 팝업창 띄우기
+            messagebox.showinfo("Game Over", "Game Over")
         
         pygame.display.update()
 

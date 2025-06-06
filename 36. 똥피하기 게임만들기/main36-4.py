@@ -1,6 +1,8 @@
 import pygame, sys
 from pygame.locals import *
 import random
+import tkinter as tk
+from tkinter import messagebox
 
 FPS = 60
 MAX_WIDTH = 400
@@ -32,7 +34,7 @@ class Enemy():
         self.x = random.randrange(0, MAX_WIDTH-40)
         self.y = 50
         self.speed = random.randrange(10, 20)
-        self.enemy = pygame.image.load(r'C:\파이썬과 40개의 작품들\36. 똥피하기 게임만들기\똥.png')
+        self.enemy = pygame.image.load(r'C:\Users\stone\codes\파이썬과 40개의 작품들_코드_20220602\py40\36. 똥피하기 게임만들기\똥.png')
         self.enemy = pygame.transform.scale(self.enemy,(40,40))
         
     def draw(self):
@@ -55,6 +57,7 @@ def main():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
+
                     
         clock.tick(FPS) 
         screen.fill((255, 255, 255))
@@ -67,9 +70,15 @@ def main():
         enemy.move()
         
         if player_rect.colliderect(enemy_rect):
-            print("충돌")
-            pygame.quit()
-            sys.exit()
+            # print("충돌")
+            # pygame.quit()
+            # sys.exit()
+            # Tkinter 창 숨기기
+            root = tk.Tk()
+            root.withdraw()  # 실제 GUI 창을 안 띄움
+
+            # 팝업창 띄우기
+            messagebox.showinfo("Game Over", "Game Over")
         
         pygame.display.update()
 

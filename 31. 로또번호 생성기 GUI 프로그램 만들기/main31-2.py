@@ -5,7 +5,10 @@ import random
 lotto_num = range(1,46)
 
 def buttonClick():
-    print(random.sample(lotto_num,6))
+    result = random.sample(lotto_num,6)
+    print(result)
+    label1 = tkinter.Label(window, text=str(result), font=tkinter.font.Font(size=20))
+    label1.pack()
     
 window=tkinter.Tk()
 window.title("lotto")

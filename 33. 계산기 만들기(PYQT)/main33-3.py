@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import *
 from PyQt5 import uic
 
 
-ui_path = r"33. 계산기 만들기(PYQT)\계산기.ui"
+ui_path = r"C:\Users\stone\codes\파이썬과 40개의 작품들_코드_20220602\py40\33. 계산기 만들기(PYQT)\계산기.ui"
 form_class = uic.loadUiType(ui_path)[0] 
 
 

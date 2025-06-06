@@ -1,6 +1,7 @@
 import streamlit as st
 import datetime
 import pyupbit
+from threading import Thread
 
 d = st.date_input(
     "날짜를 선택하세요",

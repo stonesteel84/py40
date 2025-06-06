@@ -5,7 +5,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 
 
-ui_path = r"34. 그림판 만들기(PYQT)\그림판.ui"
+ui_path = r"C:\Users\stone\codes\파이썬과 40개의 작품들_코드_20220602\py40\34. 그림판 만들기(PYQT)\그림판.ui"
 form_class = uic.loadUiType(ui_path)[0] 
 
 

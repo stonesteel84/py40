@@ -2,8 +2,8 @@ import tensorflow.keras
 from PIL import Image, ImageOps
 import numpy as np
 
-model_path = r"37. 인공지능 사과와 오렌지 구분하기\converted_keras\keras_model.h5"
-labels_path = r"37. 인공지능 사과와 오렌지 구분하기\converted_keras\labels.txt"
+model_path = r"C:\Users\stone\codes\파이썬과 40개의 작품들_코드_20220602\py40\37. 인공지능 사과와 오렌지 구분하기\converted_keras\keras_model.h5"
+labels_path = r"C:\Users\stone\codes\파이썬과 40개의 작품들_코드_20220602\py40\37. 인공지능 사과와 오렌지 구분하기\converted_keras\labels.txt"
 image_path = r"37. 인공지능 사과와 오렌지 구분하기\검증용사진\oranges-2533198_1920.jpg"
 
 model = tensorflow.keras.models.load_model(model_path)
